@@ -47,7 +47,7 @@ testDuplicates();
 
     public void testMixed(){
 
-    	int[] arr = new int[5];
+      int[] arr = new int[5];
         arr[0] = -8;
         arr[1] = 9;
         arr[2] = 7;
@@ -61,11 +61,17 @@ testDuplicates();
         Sortedarr[3] = 7;
         Sortedarr[4] = 9;
 
+        SelectionSort x=new SelectionSort();
+        arr=x.basicSelectionSort(arr);
+        for(int i=0;i<arr.length;i++)
+        {
+        	assert(arr[i]==Sortedarr[i]);
+        }
     }
 
     public void testDuplicates(){
 
-    	int[] arr = new int[5];
+      int[] arr = new int[5];
         arr[0] = 8;
         arr[1] = 8;
         arr[2] = 7;
@@ -78,5 +84,12 @@ testDuplicates();
         Sortedarr[2] = 7;
         Sortedarr[3] = 8;
         Sortedarr[4] = 8;
+
+        SelectionSort x=new SelectionSort();
+        arr=x.basicSelectionSort(arr);
+        for(int i=0;i<arr.length;i++)
+        {
+        	assert(arr[i]==Sortedarr[i]);
+        }
     }
 }
